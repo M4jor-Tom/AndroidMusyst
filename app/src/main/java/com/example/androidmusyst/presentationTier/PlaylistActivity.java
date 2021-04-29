@@ -1,8 +1,10 @@
-package com.example.androidmusyst;
+package com.example.androidmusyst.presentationTier;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.androidmusyst.R;
 
 public class PlaylistActivity extends AppCompatActivity
 {
