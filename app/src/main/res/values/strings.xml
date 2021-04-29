@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Musyst</string>
-    <string name="playlists_main_menu_button">Playlists</string>
-    <string name="authors_main_menu_button">Authors</string>
-    <string name="albums_main_menu_button">Albums</string>
+    <string name="playlist_main_menu_button">Playlists</string>
+    <string name="author_main_menu_button">Authors</string>
+    <string name="album_main_menu_button">Albums</string>
+    <string name="author_label">Authors you know</string>
+    <string name="album_label">Albums you have</string>
+    <string name="playlist_label">Your playlists</string>
 </resources>

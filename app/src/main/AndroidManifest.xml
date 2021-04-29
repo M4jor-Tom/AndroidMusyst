@@ -17,15 +17,21 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".AuthorActivity">
+        <activity
+            android:name=".AuthorActivity"
+            android:label="@string/author_label">
 
         </activity>
 
-        <activity android:name=".AlbumActivity">
+        <activity
+            android:name=".AlbumActivity"
+            android:label="@string/album_label">
 
         </activity>
 
-        <activity android:name=".PlaylistActivity">
+        <activity
+            android:name=".PlaylistActivity"
+            android:label="@string/playlist_label">
 
         </activity>
     </application>

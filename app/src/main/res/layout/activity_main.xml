@@ -13,7 +13,7 @@
         android:id="@+id/authorMainButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/authors_main_menu_button">
+        android:text="@string/author_main_menu_button">
 
     </com.google.android.material.button.MaterialButton>
 
@@ -22,7 +22,7 @@
         android:layout_marginTop="10pt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/albums_main_menu_button">
+        android:text="@string/album_main_menu_button">
 
     </com.google.android.material.button.MaterialButton>
 
@@ -31,7 +31,7 @@
         android:layout_marginTop="10pt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/playlists_main_menu_button">
+        android:text="@string/playlist_main_menu_button">
 
     </com.google.android.material.button.MaterialButton>
 
