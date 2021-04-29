@@ -1,4 +1,4 @@
-package com.example.androidmusyst;
+package com.example.androidmusyst.presentationTier;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.androidmusyst.R;
 import com.google.android.material.button.MaterialButton;
 
 public class MainActivity extends AppCompatActivity
