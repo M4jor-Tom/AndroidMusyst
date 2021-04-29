@@ -8,6 +8,7 @@ public class AndroidMusistVersionable extends versionystPackage.Versionable
     {
         super();
         getDependencies().put("Versionyst", 4);
+        getDependencies().put("ResourcystVersionable", 5);
     }
 
     @Override

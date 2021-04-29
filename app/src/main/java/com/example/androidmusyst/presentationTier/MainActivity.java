@@ -13,6 +13,8 @@ import com.google.android.material.button.MaterialButton;
 
 import java.util.HashMap;
 
+import resourcePackage.ResourcystVersionable;
+
 public class MainActivity extends AppCompatActivity
 {
     public static void versionsCheck()
@@ -22,12 +24,14 @@ public class MainActivity extends AppCompatActivity
         versionystPackage.Versionable[] versionables =
                 {
                         new AndroidMusistVersionable(),
-                        new Versionyst()
+                        new Versionyst(),
+                        new ResourcystVersionable()
                 };
 
         //Versions setting
         existingDependencies.put("AndroidMusistVersionable", versionables[0].getVersionId());
         existingDependencies.put("Versionyst", versionables[1].getVersionId());
+        existingDependencies.put("ResourcystVersionable", versionables[2].getVersionId());
 
         //Versions checking
         for(versionystPackage.Versionable versionable: versionables)
