@@ -20,6 +20,10 @@
         <activity android:name=".AuthorActivity">
 
         </activity>
+
+        <activity android:name=".AlbumActivity">
+
+        </activity>
     </application>
 
 </manifest>
