@@ -1,3 +1,6 @@
 [submodule "app/src/main/java/com/example/androidmusyst/Versionyst"]
 	path = app/src/main/java/com/example/androidmusyst/Versionyst
 	url = https://github.com/M4jor-Tom/Versionyst
+[submodule "app/src/main/java/com/example/androidmusyst/Resourcyst"]
+	path = app/src/main/java/com/example/androidmusyst/Resourcyst
+	url = https://github.com/M4jor-Tom/Resourcyst
