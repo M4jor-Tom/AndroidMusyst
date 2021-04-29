@@ -15,7 +15,7 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:hint="Author to look for">
+            android:hint="Album to look for">
 
         </EditText>
 

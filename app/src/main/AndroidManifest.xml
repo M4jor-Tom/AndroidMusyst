@@ -20,6 +20,14 @@
         <activity android:name=".AuthorActivity">
 
         </activity>
+
+        <activity android:name=".AlbumActivity">
+
+        </activity>
+
+        <activity android:name=".PlaylistActivity">
+
+        </activity>
     </application>
 
 </manifest>
