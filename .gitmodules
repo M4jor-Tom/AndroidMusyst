@@ -4,3 +4,6 @@
 [submodule "app/src/main/java/com/example/androidmusyst/Resourcyst"]
 	path = app/src/main/java/com/example/androidmusyst/Resourcyst
 	url = https://github.com/M4jor-Tom/Resourcyst
+[submodule "app/src/main/java/com/example/androidmusyst/MusicFindyst"]
+	path = app/src/main/java/com/example/androidmusyst/MusicFindyst
+	url = https://github.com/M4jor-Tom/MusicFindyst
