@@ -7,15 +7,40 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.androidmusyst.R;
+import com.example.androidmusyst.Versionyst.src.versionystPackage.Versionyst;
+import com.example.androidmusyst.config.AndroidMusistVersionable;
 import com.google.android.material.button.MaterialButton;
+
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity
 {
+    public static void versionsCheck()
+    {
+        //Variables initialization
+        HashMap<String, Integer> existingDependencies = new HashMap<>();
+        versionystPackage.Versionable[] versionables =
+                {
+                        new AndroidMusistVersionable(),
+                        new Versionyst()
+                };
+
+        //Versions setting
+        existingDependencies.put("AndroidMusistVersionable", versionables[0].getVersionId());
+        existingDependencies.put("Versionyst", versionables[1].getVersionId());
+
+        //Versions checking
+        for(versionystPackage.Versionable versionable: versionables)
+            versionable.checkSubPackagesVersions(existingDependencies);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        versionsCheck();
 
         MaterialButton authorButton = (MaterialButton)findViewById(R.id.authorMainButton);
         MaterialButton albumButton = (MaterialButton)findViewById(R.id.albumMainButton);
