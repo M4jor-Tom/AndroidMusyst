@@ -7,13 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.androidmusyst.R;
+import com.example.androidmusyst.Versionyst.src.versionystPackage.Versionable;
 import com.example.androidmusyst.Versionyst.src.versionystPackage.Versionyst;
 import com.example.androidmusyst.config.AndroidMusistVersionable;
 import com.google.android.material.button.MaterialButton;
 
 import java.util.HashMap;
 
-import resourcePackage.ResourcystVersionable;
+import com.example.androidmusyst.MusicFindyst.src.musicFindystPackage.MusicFindystVersionable;
+import com.example.androidmusyst.Resourcyst.src.resourcePackage.ResourcystVersionable;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -21,20 +23,22 @@ public class MainActivity extends AppCompatActivity
     {
         //Variables initialization
         HashMap<String, Integer> existingDependencies = new HashMap<>();
-        versionystPackage.Versionable[] versionables =
+        Versionable[] versionables =
                 {
                         new AndroidMusistVersionable(),
                         new Versionyst(),
-                        new ResourcystVersionable()
+                        new ResourcystVersionable(),
+                        new MusicFindystVersionable()
                 };
 
         //Versions setting
         existingDependencies.put("AndroidMusistVersionable", versionables[0].getVersionId());
         existingDependencies.put("Versionyst", versionables[1].getVersionId());
         existingDependencies.put("ResourcystVersionable", versionables[2].getVersionId());
+        existingDependencies.put("MusicFindystVersionable", versionables[3].getVersionId());
 
         //Versions checking
-        for(versionystPackage.Versionable versionable: versionables)
+        for(Versionable versionable: versionables)
             versionable.checkSubPackagesVersions(existingDependencies);
     }
 
