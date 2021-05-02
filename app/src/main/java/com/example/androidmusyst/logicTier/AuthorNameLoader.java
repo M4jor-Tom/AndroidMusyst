@@ -27,9 +27,9 @@ public class AuthorNameLoader extends AsyncTaskLoader<String>
     @Override
     public String loadInBackground()
     {
+        String potentialTypo = AuthorActivity.getSearchBar().getText().toString();
         try
         {
-            String potentialTypo = AuthorActivity.getSearchBar().getText().toString();
             String authorName = MainActivity.getLogicInterface().correctAuthorName(potentialTypo);
             System.out.println(toString() + "::loadInBackGround() " + potentialTypo + " then " + authorName);
             return authorName;
@@ -38,7 +38,7 @@ public class AuthorNameLoader extends AsyncTaskLoader<String>
         {
             Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
         }
-        return getAuthorName();
+        return potentialTypo;
     }
 
     private String getAuthorName()
