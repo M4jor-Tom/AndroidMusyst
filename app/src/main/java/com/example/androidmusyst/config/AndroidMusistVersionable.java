@@ -9,7 +9,7 @@ public class AndroidMusistVersionable extends Versionable
         super();
         getDependencies().put("Versionyst", 5);
         getDependencies().put("ResourcystVersionable", 5);
-        getDependencies().put("MusicFindystVersionable", 9);
+        getDependencies().put("MusicFindystVersionable", 10);
     }
 
     @Override
