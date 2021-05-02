@@ -1,23 +1,19 @@
 package com.example.androidmusyst.logicTier;
 
 import android.content.Context;
-import android.os.Bundle;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.loader.app.LoaderManager;
 import androidx.loader.content.AsyncTaskLoader;
-import androidx.loader.content.Loader;
 
 import com.example.androidmusyst.MusicFindyst.src.musicFindystPackage.TooMuchQueriesException;
-import com.example.androidmusyst.presentationTier.AuthorActivity;
+import com.example.androidmusyst.presentationTier.AlbumActivity;
 import com.example.androidmusyst.presentationTier.MainActivity;
 
-public class AuthorNameLoader extends AsyncTaskLoader<String>
+public class AlbumNameLoader extends AsyncTaskLoader<String>
 {
-    public AuthorNameLoader(@NonNull Context context)
-    {
+    public AlbumNameLoader(@NonNull Context context) {
         super(context);
     }
 
@@ -25,12 +21,12 @@ public class AuthorNameLoader extends AsyncTaskLoader<String>
     @Override
     public String loadInBackground()
     {
-        String potentialTypo = AuthorActivity.getSearchBar().getText().toString();
+        String potentialTypo = AlbumActivity.getSearchBar().getText().toString();
         try
         {
-            String authorName = MainActivity.getLogicInterface().correctAuthorName(potentialTypo);
-            System.out.println(toString() + "::loadInBackGround() " + potentialTypo + " then " + authorName);
-            return authorName;
+            String albumName = MainActivity.getLogicInterface().correctAlbumName(potentialTypo);
+            System.out.println(toString() + "::loadInBackGround() " + potentialTypo + " then " + albumName);
+            return albumName;
         }
         catch(TooMuchQueriesException e)
         {
