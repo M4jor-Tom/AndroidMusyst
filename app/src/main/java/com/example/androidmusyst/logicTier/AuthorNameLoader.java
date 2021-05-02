@@ -16,8 +16,6 @@ import com.example.androidmusyst.presentationTier.MainActivity;
 
 public class AuthorNameLoader extends AsyncTaskLoader<String>
 {
-    private String _authorName;
-
     public AuthorNameLoader(@NonNull Context context)
     {
         super(context);
@@ -39,15 +37,5 @@ public class AuthorNameLoader extends AsyncTaskLoader<String>
             Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
         }
         return potentialTypo;
-    }
-
-    private String getAuthorName()
-    {
-        return _authorName;
-    }
-
-    public void setAuthorName(String authorName)
-    {
-        _authorName = authorName;
     }
 }
