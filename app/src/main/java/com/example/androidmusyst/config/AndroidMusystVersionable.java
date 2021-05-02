@@ -2,9 +2,9 @@ package com.example.androidmusyst.config;
 
 import com.example.androidmusyst.Versionyst.src.versionystPackage.*;
 
-public class AndroidMusistVersionable extends Versionable
+public class AndroidMusystVersionable extends Versionable
 {
-    public AndroidMusistVersionable()
+    public AndroidMusystVersionable()
     {
         super();
         getDependencies().put("Versionyst", 5);
