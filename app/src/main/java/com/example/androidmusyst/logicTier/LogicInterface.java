@@ -1,6 +1,8 @@
 package com.example.androidmusyst.logicTier;
 
-public interface LogicInterface
+import com.example.androidmusyst.MusicFindyst.src.musicFindystPackage.MusicFindystInterface;
+
+public interface LogicInterface extends MusicFindystInterface
 {
 
 }
