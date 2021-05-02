@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.androidmusyst.R;
 import com.google.android.material.button.MaterialButton;
 
-public class AuthorActivity extends AppCompatActivity
+public class AuthorActivity extends SearchableActivity
 {
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -16,7 +16,7 @@ public class AuthorActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_author);
 
-        EditText authorSearchBar = (EditText)findViewById(R.id.authorSearchBar);
-        MaterialButton authorSearchMaterialButton = (MaterialButton)findViewById(R.id.authorSearchMaterialButton);
+        setSearchBar((EditText)findViewById(R.id.authorSearchBar));
+        setSearchMaterialButton((MaterialButton)findViewById(R.id.authorSearchMaterialButton));
     }
 }
