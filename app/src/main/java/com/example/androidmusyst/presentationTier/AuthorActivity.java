@@ -6,6 +6,7 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.androidmusyst.R;
+import com.google.android.material.button.MaterialButton;
 
 public class AuthorActivity extends AppCompatActivity
 {
@@ -16,5 +17,6 @@ public class AuthorActivity extends AppCompatActivity
         setContentView(R.layout.activity_author);
 
         EditText authorSearchBar = (EditText)findViewById(R.id.authorSearchBar);
+        MaterialButton authorSearchMaterialButton = (MaterialButton)findViewById(R.id.authorSearchMaterialButton);
     }
 }
