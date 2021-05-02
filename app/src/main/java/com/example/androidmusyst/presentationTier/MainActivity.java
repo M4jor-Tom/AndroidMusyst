@@ -10,6 +10,8 @@ import com.example.androidmusyst.R;
 import com.example.androidmusyst.Versionyst.src.versionystPackage.Versionable;
 import com.example.androidmusyst.Versionyst.src.versionystPackage.Versionyst;
 import com.example.androidmusyst.config.AndroidMusistVersionable;
+import com.example.androidmusyst.logicTier.Logic;
+import com.example.androidmusyst.logicTier.LogicInterface;
 import com.google.android.material.button.MaterialButton;
 
 import java.util.HashMap;
@@ -19,6 +21,8 @@ import com.example.androidmusyst.Resourcyst.src.resourcePackage.ResourcystVersio
 
 public class MainActivity extends AppCompatActivity
 {
+    private static LogicInterface _logicInterface;
+
     public static void versionsCheck()
     {
         //Variables initialization
@@ -49,6 +53,8 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         versionsCheck();
+
+        setLogicInterface(new Logic());
 
         MaterialButton authorButton = (MaterialButton)findViewById(R.id.authorMainButton);
         MaterialButton albumButton = (MaterialButton)findViewById(R.id.albumMainButton);
@@ -83,5 +89,15 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
+    }
+
+    public static LogicInterface getLogicInterface()
+    {
+        return _logicInterface;
+    }
+
+    public static void setLogicInterface(LogicInterface logicInterface)
+    {
+        _logicInterface = logicInterface;
     }
 }
