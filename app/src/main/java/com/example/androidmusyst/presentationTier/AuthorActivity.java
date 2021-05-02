@@ -3,8 +3,6 @@ package com.example.androidmusyst.presentationTier;
 import android.os.Bundle;
 import android.widget.EditText;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.androidmusyst.MusicFindyst.src.musicFindystPackage.TooMuchQueriesException;
 import com.example.androidmusyst.R;
 import com.google.android.material.button.MaterialButton;
