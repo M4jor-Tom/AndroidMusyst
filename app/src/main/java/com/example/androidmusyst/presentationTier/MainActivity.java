@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity
 
         versionsCheck();
 
-        setLogicInterface(new Logic());
+        setLogicInterface(new Logic(getApplicationContext()));
 
         MaterialButton authorButton = (MaterialButton)findViewById(R.id.authorMainButton);
         MaterialButton albumButton = (MaterialButton)findViewById(R.id.albumMainButton);
