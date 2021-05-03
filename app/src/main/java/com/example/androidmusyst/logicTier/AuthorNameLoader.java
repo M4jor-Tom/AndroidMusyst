@@ -2,6 +2,7 @@ package com.example.androidmusyst.logicTier;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -14,18 +15,18 @@ import com.example.androidmusyst.MusicFindyst.src.musicFindystPackage.TooMuchQue
 import com.example.androidmusyst.presentationTier.AuthorActivity;
 import com.example.androidmusyst.presentationTier.MainActivity;
 
-public class AuthorNameLoader extends AsyncTaskLoader<String>
+public class AuthorNameLoader extends NameLoader
 {
-    public AuthorNameLoader(@NonNull Context context)
+    public AuthorNameLoader(@NonNull Context context, EditText searchBar)
     {
-        super(context);
+        super(context, searchBar);
     }
 
     @Nullable
     @Override
     public String loadInBackground()
     {
-        String potentialTypo = AuthorActivity.getSearchBar().getText().toString();
+        String potentialTypo = getSearchBar().getText().toString();
         try
         {
             String authorName = MainActivity.getLogicInterface().correctAuthorName(potentialTypo);

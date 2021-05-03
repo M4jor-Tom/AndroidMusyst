@@ -1,5 +1,6 @@
 package com.example.androidmusyst.presentationTier;
 
+import android.os.Bundle;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
@@ -14,6 +15,11 @@ abstract public class SearchableActivity extends AppCompatActivity implements Lo
     private EditText _searchBar;
     private MaterialButton _searchMaterialButton;
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+    }
 
 
     public EditText getSearchBar()
