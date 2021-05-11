@@ -15,3 +15,5 @@
 local.properties
 
 *.jar
+
+.idea/compiler.xml
