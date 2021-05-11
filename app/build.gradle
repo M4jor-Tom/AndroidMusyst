@@ -28,6 +28,10 @@ android {
     }
 }
 
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
@@ -38,4 +42,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     implementation 'org.jsoup:jsoup:1.13.1'
+
+    implementation "com.github.tdebatty:java-string-similarity:v2.0.0"
 }
