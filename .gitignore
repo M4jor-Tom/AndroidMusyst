@@ -15,3 +15,7 @@
 local.properties
 
 *.jar
+
+.idea/compiler.xml
+
+gradle/wrapper/gradle-wrapper.properties

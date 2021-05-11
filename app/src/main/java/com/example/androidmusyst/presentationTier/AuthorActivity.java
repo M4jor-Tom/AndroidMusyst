@@ -18,11 +18,8 @@ import com.example.androidmusyst.R;
 import com.example.androidmusyst.logicTier.AuthorNameLoader;
 import com.google.android.material.button.MaterialButton;
 
-public class AuthorActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<String>
+public class AuthorActivity extends SearchableActivity
 {
-    private static EditText _searchBar;
-    private static MaterialButton _searchMaterialButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -47,39 +44,6 @@ public class AuthorActivity extends AppCompatActivity implements LoaderManager.L
     @Override
     public Loader<String> onCreateLoader(int id, @Nullable Bundle args)
     {
-        return new AuthorNameLoader(getApplicationContext());
-    }
-
-    @Override
-    public void onLoadFinished(@NonNull Loader<String> loader, String data)
-    {
-        System.out.println(toString() + "::onLoadFinished() " + data);
-        AuthorActivity.getSearchBar().setText(data);
-    }
-
-    @Override
-    public void onLoaderReset(@NonNull Loader<String> loader)
-    {
-
-    }
-
-    public static EditText getSearchBar()
-    {
-        return _searchBar;
-    }
-
-    protected static void setSearchBar(EditText searchBar)
-    {
-        _searchBar = searchBar;
-    }
-
-    protected static MaterialButton getSearchMaterialButton()
-    {
-        return _searchMaterialButton;
-    }
-
-    protected static void setSearchMaterialButton(MaterialButton searchMaterialButton)
-    {
-        _searchMaterialButton = searchMaterialButton;
+        return new AuthorNameLoader(getApplicationContext(), getSearchBar());
     }
 }

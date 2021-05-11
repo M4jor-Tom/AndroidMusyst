@@ -7,13 +7,11 @@ import com.example.androidmusyst.MusicFindyst.src.musicFindystPackage.GoogleMusi
 public class Logic extends GoogleMusicScraper implements LogicInterface
 {
     private Context _context;
-    private AuthorNameLoader _authorNameLoader;
 
     public Logic(Context context)
     {
         super();
         setContext(context);
-        setAuthorNameLoader(new AuthorNameLoader(getContext()));
     }
 
     private Context getContext()
@@ -24,15 +22,5 @@ public class Logic extends GoogleMusicScraper implements LogicInterface
     private void setContext(Context context)
     {
         _context = context;
-    }
-
-    private AuthorNameLoader getAuthorNameLoader()
-    {
-        return _authorNameLoader;
-    }
-
-    private void setAuthorNameLoader(AuthorNameLoader authorNameLoader)
-    {
-        _authorNameLoader = authorNameLoader;
     }
 }
