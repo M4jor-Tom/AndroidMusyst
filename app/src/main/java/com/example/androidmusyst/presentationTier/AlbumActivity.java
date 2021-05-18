@@ -26,13 +26,12 @@ public class AlbumActivity extends SearchableActivity
         setCorrectMaterialButton((MaterialButton)findViewById(R.id.albumCorrectMaterialButton));
         setSearchMaterialButton((MaterialButton)findViewById(R.id.albumSearchMaterialButton));
 
-        getSearchMaterialButton().setOnLongClickListener(new View.OnLongClickListener()
+        getCorrectMaterialButton().setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public boolean onLongClick(View v)
+            public void onClick(View v)
             {
                 getSupportLoaderManager().initLoader(1, null, AlbumActivity.this).forceLoad();
-                return false;
             }
         });
     }
