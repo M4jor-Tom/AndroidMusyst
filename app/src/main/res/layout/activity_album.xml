@@ -21,6 +21,14 @@
         </EditText>
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/albumCorrectMaterialButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="correct">
+
+        </com.google.android.material.button.MaterialButton>
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/albumSearchMaterialButton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
