@@ -23,6 +23,7 @@ public class AlbumActivity extends SearchableActivity
         setContentView(R.layout.activity_album);
 
         setSearchBar((EditText)findViewById(R.id.albumSearchBar));
+        setCorrectMaterialButton((MaterialButton)findViewById(R.id.albumCorrectMaterialButton));
         setSearchMaterialButton((MaterialButton)findViewById(R.id.albumSearchMaterialButton));
 
         getSearchMaterialButton().setOnLongClickListener(new View.OnLongClickListener()
