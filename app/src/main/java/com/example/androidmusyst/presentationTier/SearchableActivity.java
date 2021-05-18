@@ -13,6 +13,7 @@ import com.google.android.material.button.MaterialButton;
 abstract public class SearchableActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<String>
 {
     private EditText _searchBar;
+    private MaterialButton _correctMaterialButton;
     private MaterialButton _searchMaterialButton;
 
     @Override
@@ -30,6 +31,16 @@ abstract public class SearchableActivity extends AppCompatActivity implements Lo
     protected void setSearchBar(EditText searchBar)
     {
         _searchBar = searchBar;
+    }
+
+    protected MaterialButton getCorrectMaterialButton()
+    {
+        return _correctMaterialButton;
+    }
+
+    protected void setCorrectMaterialButton(MaterialButton correctMaterialButton)
+    {
+        _correctMaterialButton = correctMaterialButton;
     }
 
     protected MaterialButton getSearchMaterialButton()

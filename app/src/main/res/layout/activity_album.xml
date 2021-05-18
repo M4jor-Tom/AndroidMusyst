@@ -12,6 +12,14 @@
         android:orientation="horizontal"
         android:gravity="center">
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/albumCorrectMaterialButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="correct">
+
+        </com.google.android.material.button.MaterialButton>
+
         <EditText
             android:id="@+id/albumSearchBar"
             android:layout_width="wrap_content"
