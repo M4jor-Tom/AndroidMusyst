@@ -14,11 +14,8 @@ import com.example.androidmusyst.R;
 import com.example.androidmusyst.logicTier.AlbumNameLoader;
 import com.google.android.material.button.MaterialButton;
 
-public class AlbumActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<String>
+public class AlbumActivity extends SearchableActivity
 {
-    private static EditText _searchBar;
-    private static MaterialButton _searchMaterialButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -43,39 +40,6 @@ public class AlbumActivity extends AppCompatActivity implements LoaderManager.Lo
     @Override
     public Loader<String> onCreateLoader(int id, @Nullable Bundle args)
     {
-        return new AlbumNameLoader(getApplicationContext());
-    }
-
-    @Override
-    public void onLoadFinished(@NonNull Loader<String> loader, String data)
-    {
-        System.out.println(toString() + "::onLoadFinished() " + data);
-        AlbumActivity.getSearchBar().setText(data);
-    }
-
-    @Override
-    public void onLoaderReset(@NonNull Loader<String> loader)
-    {
-
-    }
-
-    public static EditText getSearchBar()
-    {
-        return _searchBar;
-    }
-
-    protected static void setSearchBar(EditText searchBar)
-    {
-        _searchBar = searchBar;
-    }
-
-    protected static MaterialButton getSearchMaterialButton()
-    {
-        return _searchMaterialButton;
-    }
-
-    protected static void setSearchMaterialButton(MaterialButton searchMaterialButton)
-    {
-        _searchMaterialButton = searchMaterialButton;
+        return new AlbumNameLoader(getApplicationContext(), getSearchBar());
     }
 }
