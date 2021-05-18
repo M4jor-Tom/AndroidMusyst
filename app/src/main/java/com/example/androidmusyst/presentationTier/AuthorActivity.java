@@ -27,15 +27,15 @@ public class AuthorActivity extends SearchableActivity
         setContentView(R.layout.activity_author);
 
         setSearchBar((EditText)findViewById(R.id.authorSearchBar));
+        setCorrectMaterialButton((MaterialButton)findViewById(R.id.authorCorrectMaterialButton));
         setSearchMaterialButton((MaterialButton)findViewById(R.id.authorSearchMaterialButton));
 
-        getSearchMaterialButton().setOnLongClickListener(new View.OnLongClickListener()
+        getCorrectMaterialButton().setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public boolean onLongClick(View v)
+            public void onClick(View v)
             {
                 getSupportLoaderManager().initLoader(0, null, AuthorActivity.this).forceLoad();
-                return false;
             }
         });
     }
